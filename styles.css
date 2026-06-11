@@ -131,7 +131,7 @@ em.serif {
   box-shadow: 0 10px 30px -18px rgba(0,0,0,.3);
 }
 
-.logo { position: relative; height: 30px; width: 96px; flex: none; }
+.logo { position: relative; height: 48px; width: 154px; flex: none; }
 .logo img { position: absolute; inset: 0; height: 100%; width: auto; object-fit: contain; transition: opacity .3s ease; }
 .logo .logo-light { opacity: 0; }
 .logo .logo-dark { opacity: 1; }
