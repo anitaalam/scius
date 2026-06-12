@@ -1,4 +1,4 @@
-// ===== Scius Homepage — behaviour =====
+// ===== Scius — site behaviour =====
 
 // Reveal footer: reserve scroll space below content equal to footer height
 const footerEl = document.querySelector('.site-footer');
@@ -30,3 +30,34 @@ if ('IntersectionObserver' in window) {
 } else {
   reveals.forEach(el => el.classList.add('in'));
 }
+
+// Testimonial carousel (about page)
+(function () {
+  const slides = Array.from(document.querySelectorAll('.tst-slide'));
+  const dotsWrap = document.getElementById('tst-dots');
+  if (!slides.length || !dotsWrap) return;
+  let i = 0;
+  slides.forEach((_, idx) => {
+    const b = document.createElement('button');
+    b.setAttribute('aria-label', 'Testimonial ' + (idx + 1));
+    if (idx === 0) b.classList.add('active');
+    b.addEventListener('click', () => go(idx));
+    dotsWrap.appendChild(b);
+  });
+  const dots = Array.from(dotsWrap.children);
+  function go(n) {
+    i = (n + slides.length) % slides.length;
+    slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+  }
+  const prevBtn = document.querySelector('.tst-arrow.prev');
+  const nextBtn = document.querySelector('.tst-arrow.next');
+  if (prevBtn) prevBtn.addEventListener('click', () => go(i - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => go(i + 1));
+  let timer = setInterval(() => go(i + 1), 6000);
+  const tstEl = document.querySelector('.tst');
+  if (tstEl) {
+    tstEl.addEventListener('mouseenter', () => clearInterval(timer));
+    tstEl.addEventListener('mouseleave', () => { timer = setInterval(() => go(i + 1), 6000); });
+  }
+})();
