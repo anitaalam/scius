@@ -155,6 +155,78 @@ em.serif {
 .header-cta { display: flex; align-items: center; gap: 8px; }
 .nav-toggle { display: none; }
 
+/* ---------- Mobile Nav Overlay ---------- */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  visibility: hidden;
+  pointer-events: none;
+}
+.mobile-nav.open {
+  visibility: visible;
+  pointer-events: auto;
+}
+.mobile-nav-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(28,27,25,.45);
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+.mobile-nav.open .mobile-nav-backdrop { opacity: 1; }
+.mobile-nav-panel {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: min(340px, 85vw);
+  background: var(--white);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transform: translateX(100%);
+  transition: transform .35s cubic-bezier(.4,0,.2,1);
+  overflow-y: auto;
+}
+.mobile-nav.open .mobile-nav-panel { transform: translateX(0); }
+.mobile-nav-close {
+  align-self: flex-end;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(49,48,46,.15);
+  background: transparent;
+  color: var(--charcoal);
+  font-size: 22px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background .25s ease;
+  margin-bottom: 12px;
+}
+.mobile-nav-close:hover { background: var(--offwhite); }
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.mobile-nav-links a {
+  display: block;
+  padding: 16px 4px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--charcoal);
+  border-bottom: 1px solid rgba(49,48,46,.08);
+  transition: color .25s ease, padding-left .25s ease;
+}
+.mobile-nav-links a:first-child { border-top: 1px solid rgba(49,48,46,.08); }
+.mobile-nav-links a:hover { color: var(--moss); padding-left: 8px; }
+.mobile-nav-links a.active { color: var(--moss); }
+.mobile-nav-cta {
+  margin-top: auto;
+  padding-top: 24px;
+}
+.mobile-nav-cta .btn { width: 100%; justify-content: center; }
+
 /* ---------- Hero ---------- */
 /* Subtle placeholder treatment so empty image slots read as image zones */
 .img-ph {
@@ -437,10 +509,54 @@ h2.section-title em.serif { color: var(--moss); }
   .hero-stats .stat, .stats-row .stat { padding-left: 0; border-left: none; }
   .prefab-side { grid-template-columns: 1fr; }
   .work-row2 { grid-template-columns: 1fr; }
-  .footer-main { gap: 22px; }
-  .footer-nav { gap: 18px 24px; }
+
+  /* Hero */
+  .hero h1 { max-width: none; }
+  .hero-media { min-height: 44vh; }
+  .hero-text { padding: 110px var(--gutter) 40px; }
+
+  /* Work cards */
+  .work-card.big { min-height: 360px; }
+  .work-card.tall { min-height: 280px; }
+  .work-card .wc-meta h3 { font-size: 22px; }
+  .work-head { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+  /* Services */
+  .service { gap: 14px; padding: 20px 4px; }
+  .service h3 { font-size: 20px; }
+  .service .svc-arrow { width: 38px; height: 38px; font-size: 14px; }
+
+  /* Stats */
+  .stats-row { grid-template-columns: 1fr; gap: 28px; }
+  .stats-row .stat { padding-left: 0; border-left: none; border-bottom: 1px solid rgba(255,255,255,.1); padding-bottom: 24px; }
+  .stats-row .stat:last-child { border-bottom: none; padding-bottom: 0; }
+
+  /* Footer */
+  .footer-main { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .footer-nav { flex-direction: column; gap: 12px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .footer-bottom .legal { gap: 18px; }
+
+  /* CTA */
+  .cta-inner { gap: 28px; }
+  .cta-actions { flex-direction: column; }
+  .cta-actions .btn { width: 100%; justify-content: center; }
+
   /* About page responsive */
   .tst-arrow { display: none; }
+
+}
+
+/* ---------- Small mobile ---------- */
+@media (max-width: 480px) {
+  .hero h1 { font-size: clamp(28px, 8vw, 36px); }
+  .hero p.lede { font-size: 15px; }
+  .prefab-main { min-height: 320px; }
+  .prefab-main .pf-content h3 { font-size: 22px; }
+  .work-card.big { min-height: 280px; }
+  .work-card.small { min-height: 180px; }
+  .num-stats { grid-template-columns: 1fr; gap: 24px; }
+  .btn { font-size: 14px; padding: 13px 20px; }
 }
 
 /* ========== ABOUT PAGE ========== */

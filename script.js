@@ -31,6 +31,23 @@ if ('IntersectionObserver' in window) {
   reveals.forEach(el => el.classList.add('in'));
 }
 
+// Mobile nav
+const mobileNav = document.getElementById('mobileNav');
+const navToggle = document.querySelector('.nav-toggle');
+const mobileNavClose = document.getElementById('mobileNavClose');
+const mobileNavBackdrop = document.getElementById('mobileNavBackdrop');
+if (mobileNav && navToggle) {
+  const openNav = () => { mobileNav.classList.add('open'); document.body.style.overflow = 'hidden'; };
+  const closeNav = () => { mobileNav.classList.remove('open'); document.body.style.overflow = ''; };
+  navToggle.addEventListener('click', openNav);
+  if (mobileNavClose) mobileNavClose.addEventListener('click', closeNav);
+  if (mobileNavBackdrop) mobileNavBackdrop.addEventListener('click', closeNav);
+  // Close on link click
+  mobileNav.querySelectorAll('.mobile-nav-links a, .mobile-nav-cta a').forEach(a => {
+    a.addEventListener('click', closeNav);
+  });
+}
+
 // Testimonial carousel (about page)
 (function () {
   const slides = Array.from(document.querySelectorAll('.tst-slide'));
