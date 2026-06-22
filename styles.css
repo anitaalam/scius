@@ -826,8 +826,8 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 /* Contact hero */
 .contact-hero { padding: clamp(120px, 14vw, 180px) 0 clamp(40px, 5vw, 60px); }
 .contact-title {
-  font-size: clamp(48px, 7vw, 88px); font-weight: 800;
-  color: var(--charcoal); letter-spacing: -0.03em; line-height: 1;
+  font-size: clamp(38px, 4.6vw, 58px); font-weight: 700;
+  color: var(--charcoal); letter-spacing: -0.025em; line-height: 1.04;
   margin-bottom: clamp(12px, 2vw, 20px);
 }
 .contact-subtitle {
