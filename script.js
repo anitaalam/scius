@@ -88,6 +88,18 @@ if (mobileNav && navToggle) {
   });
 })();
 
+// FAQ accordion (contact page)
+(function () {
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+})();
+
 // Work page category filter
 (function () {
   const btns = document.querySelectorAll('.filter-btn');
