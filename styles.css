@@ -705,6 +705,34 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   color: var(--grey); max-width: 48ch; padding-bottom: 8px;
 }
 
+/* Client logos marquee */
+.work-logos { padding: clamp(8px, 1.5vw, 16px) 0; }
+.work-logos-line { height: 1px; background: rgba(0,0,0,0.08); }
+.logo-marquee {
+  overflow: hidden; position: relative;
+  padding: clamp(24px, 4vw, 44px) 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+.logo-marquee-track {
+  display: flex; align-items: center; gap: clamp(40px, 6vw, 80px);
+  width: max-content;
+  animation: marqueeScroll 30s linear infinite;
+}
+.logo-marquee-track img {
+  height: 28px; width: auto; object-fit: contain;
+  filter: grayscale(1) opacity(0.45);
+  transition: filter .3s ease;
+  flex-shrink: 0;
+}
+.logo-marquee-track img:hover {
+  filter: grayscale(0) opacity(1);
+}
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* Filter bar */
 .work-filters { padding: clamp(24px, 4vw, 48px) 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
 .filter-bar {
