@@ -88,6 +88,28 @@ if (mobileNav && navToggle) {
   });
 })();
 
+// Work page category filter
+(function () {
+  const btns = document.querySelectorAll('.filter-btn');
+  const rows = document.querySelectorAll('.work-row');
+  if (!btns.length || !rows.length) return;
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.filter;
+      rows.forEach(row => {
+        if (cat === 'all' || row.dataset.category === cat) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
+
 // Count-up animation (about page — Our Impact)
 (function () {
   const nums = document.querySelectorAll('.count-up');
