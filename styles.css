@@ -870,6 +870,40 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 .contact-card a:hover { color: var(--charcoal); }
 
+/* Contact form */
+.contact-form-section { padding: clamp(40px, 6vw, 80px) 0; }
+.contact-form-title {
+  font-size: clamp(28px, 4vw, 40px); font-weight: 800;
+  color: var(--charcoal); letter-spacing: -0.02em;
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+.contact-form { max-width: 680px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block; font-size: 13px; font-weight: 600;
+  color: var(--charcoal); margin-bottom: 8px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%; padding: 14px 16px;
+  border: 1px solid rgba(0,0,0,0.12); border-radius: 10px;
+  background: var(--white); font-family: var(--font-sans);
+  font-size: 14px; color: var(--charcoal);
+  transition: border-color .3s ease;
+  resize: vertical;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--grey); }
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none; border-color: var(--moss);
+}
+
+@media (max-width: 760px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
 /* FAQ section */
 .contact-faq {
   background: var(--charcoal); color: var(--white);
