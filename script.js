@@ -48,6 +48,46 @@ if (mobileNav && navToggle) {
   });
 }
 
+// Bio panel (team page)
+(function () {
+  const panel = document.getElementById('bioPanel');
+  const overlay = document.getElementById('bioOverlay');
+  const closeBtn = document.getElementById('bioClose');
+  const content = document.getElementById('bioContent');
+  if (!panel || !overlay) return;
+
+  const cards = document.querySelectorAll('.tm-card[data-bio]');
+
+  function openBio(slug) {
+    const tpl = document.getElementById('bio-' + slug);
+    if (!tpl) return;
+    content.innerHTML = tpl.innerHTML;
+    panel.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBio() {
+    panel.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Don't trigger if clicking the LinkedIn link
+      if (e.target.closest('.tm-li')) return;
+      openBio(card.dataset.bio);
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeBio);
+  overlay.addEventListener('click', closeBio);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && panel.classList.contains('open')) closeBio();
+  });
+})();
+
 // Testimonial carousel (about page)
 (function () {
   const slides = Array.from(document.querySelectorAll('.tst-slide'));
