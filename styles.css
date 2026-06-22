@@ -873,9 +873,9 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 /* FAQ section */
 .contact-faq {
   background: var(--charcoal); color: var(--white);
-  padding: clamp(60px, 8vw, 110px) 0;
-  border-radius: var(--radius-lg);
-  margin: clamp(40px, 6vw, 80px) var(--gutter) clamp(40px, 5vw, 60px);
+  padding: clamp(60px, 8vw, 110px) var(--gutter);
+  border-radius: 0;
+  margin: 0;
 }
 .faq-grid {
   display: grid; grid-template-columns: 1fr 1.2fr;
@@ -936,7 +936,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   .contact-card:nth-child(odd) { padding-right: 0; }
   .contact-card:nth-child(even) { padding-left: 0; }
   .faq-grid { grid-template-columns: 1fr; }
-  .contact-faq { margin-left: 16px; margin-right: 16px; border-radius: var(--radius); }
+  .contact-faq { padding-left: 16px; padding-right: 16px; }
 }
 
 /* Arrow on name */
