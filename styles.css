@@ -734,7 +734,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 
 /* Filter bar */
-.work-filters { padding: clamp(16px, 2vw, 24px) 0; }
+.work-filters { padding: clamp(40px, 5vw, 64px) 0 clamp(8px, 1vw, 12px); }
 .filter-bar {
   display: flex; justify-content: space-between;
   overflow-x: auto; -webkit-overflow-scrolling: touch;
@@ -758,7 +758,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .filter-btn.active::after { width: 100%; }
 
 /* Project rows */
-.work-list { padding: clamp(20px, 3vw, 40px) 0 clamp(60px, 8vw, 100px); }
+.work-list { padding: clamp(8px, 1vw, 16px) 0 clamp(60px, 8vw, 100px); }
 .work-row {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: clamp(28px, 4vw, 60px); align-items: center;
