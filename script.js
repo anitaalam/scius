@@ -130,6 +130,7 @@ if (mobileNav && navToggle) {
   function animateCount(el) {
     const target = parseInt(el.dataset.target, 10);
     const suffix = el.dataset.suffix || '';
+    const noComma = el.hasAttribute('data-no-comma');
     const duration = 2000;
     const start = performance.now();
 
@@ -138,7 +139,7 @@ if (mobileNav && navToggle) {
     function tick(now) {
       const progress = Math.min((now - start) / duration, 1);
       const value = Math.round(easeOut(progress) * target);
-      el.textContent = value.toLocaleString() + suffix;
+      el.textContent = (noComma ? value.toString() : value.toLocaleString()) + suffix;
       if (progress < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
