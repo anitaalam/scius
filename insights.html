@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scius Advisory — Insights</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="Scius home">
+          <img class="logo-light" src="assets/scius-logo-light.png" alt="Scius" />
+          <img class="logo-dark" src="assets/scius-logo-dark.png" alt="Scius" />
+        </a>
+        <nav class="main-nav">
+          <a href="about.html">About</a>
+          <a href="team.html">Team</a>
+          <a href="work.html">Our Work</a>
+          <a href="insights.html" class="active">Insights</a>
+          <a href="index.html#prefab">Prefab Navigator</a>
+        </nav>
+        <div class="header-cta">
+          <a href="contact.html" class="btn btn-lime">Contact<span class="arrow">→</span></a>
+          <button class="nav-toggle" aria-label="Menu">≡</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MOBILE NAV ========== -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+    <div class="mobile-nav-panel">
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+      <nav class="mobile-nav-links">
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="work.html">Our Work</a>
+        <a href="insights.html" class="active">Insights</a>
+        <a href="index.html#prefab">Prefab Navigator</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="mobile-nav-cta">
+        <a href="contact.html" class="btn btn-lime">Get in touch<span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== PAGE CONTENT ========== -->
+  <main class="page-content">
+
+    <!-- ========== INSIGHTS HERO ========== -->
+    <section class="insights-hero">
+      <div class="container">
+        <span class="eyebrow reveal">Blog</span>
+        <h1 class="insights-title reveal">Research, analysis &amp; perspectives on the <em class="serif">built environment.</em></h1>
+        <p class="insights-sub reveal">Explore our latest thinking on construction innovation, sustainability, and the future of housing.</p>
+      </div>
+    </section>
+
+    <!-- ========== FEATURED POSTS ========== -->
+    <section class="insights-featured">
+      <div class="container">
+        <h2 class="insights-section-title reveal">Featured blog posts</h2>
+        <div class="featured-grid reveal">
+          <!-- Large featured card (left) -->
+          <a href="#" class="featured-card featured-card--big">
+            <div class="featured-card-img">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop" alt="Electric construction sites" />
+            </div>
+            <div class="featured-card-meta">
+              <span class="featured-tag">Climate Solutions</span>
+              <span class="featured-read">5 min read</span>
+            </div>
+            <h3 class="featured-card-title">Why electrifying construction sites matters more than you think</h3>
+            <p class="featured-card-excerpt">Exploring the hidden emissions of diesel-powered construction and how electrification can transform the industry.</p>
+            <span class="featured-link">Read more <span class="arrow">→</span></span>
+          </a>
+
+          <!-- Stacked cards (right) -->
+          <div class="featured-stack">
+            <a href="#" class="featured-card featured-card--small">
+              <div class="featured-card-img">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=300&fit=crop" alt="Mass timber building" />
+              </div>
+              <div class="featured-card-body">
+                <div class="featured-card-meta">
+                  <span class="featured-tag">Mass Timber</span>
+                  <span class="featured-read">5 min read</span>
+                </div>
+                <h3 class="featured-card-title">Insuring the future of mass timber construction</h3>
+                <span class="featured-link">Read more <span class="arrow">→</span></span>
+              </div>
+            </a>
+
+            <a href="#" class="featured-card featured-card--small">
+              <div class="featured-card-img">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop" alt="AI technology" />
+              </div>
+              <div class="featured-card-body">
+                <div class="featured-card-meta">
+                  <span class="featured-tag">Digital Technology</span>
+                  <span class="featured-read">5 min read</span>
+                </div>
+                <h3 class="featured-card-title">How AI is reshaping construction project delivery</h3>
+                <span class="featured-link">Read more <span class="arrow">→</span></span>
+              </div>
+            </a>
+
+            <a href="#" class="featured-card featured-card--small">
+              <div class="featured-card-img">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop" alt="Prefab housing" />
+              </div>
+              <div class="featured-card-body">
+                <div class="featured-card-meta">
+                  <span class="featured-tag">Construction Innovation</span>
+                  <span class="featured-read">5 min read</span>
+                </div>
+                <h3 class="featured-card-title">Prefabrication as a pathway to affordable housing</h3>
+                <span class="featured-link">Read more <span class="arrow">→</span></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ALL POSTS GRID ========== -->
+    <section class="insights-grid-section">
+      <div class="container">
+        <h2 class="insights-section-title reveal">All posts</h2>
+        <div class="insights-grid reveal">
+
+          <a href="#" class="insight-card">
+            <div class="insight-card-img">
+              <img src="https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?w=400&h=300&fit=crop" alt="Circular economy" />
+            </div>
+            <div class="insight-card-meta">
+              <span class="insight-tag">Circularity</span>
+              <span class="insight-read">5 min read</span>
+            </div>
+            <h3 class="insight-card-title">Designing for disassembly: circularity in construction</h3>
+            <p class="insight-card-excerpt">How designing buildings for deconstruction can reduce waste and create new material economies.</p>
+            <span class="insight-link">Read more <span class="arrow">→</span></span>
+          </a>
+
+          <a href="#" class="insight-card">
+            <div class="insight-card-img">
+              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop" alt="Workforce development" />
+            </div>
+            <div class="insight-card-meta">
+              <span class="insight-tag">Workforce</span>
+              <span class="insight-read">5 min read</span>
+            </div>
+            <h3 class="insight-card-title">Bridging the skills gap in sustainable construction</h3>
+            <p class="insight-card-excerpt">Why workforce development is the missing piece in the transition to greener building practices.</p>
+            <span class="insight-link">Read more <span class="arrow">→</span></span>
+          </a>
+
+          <a href="#" class="insight-card">
+            <div class="insight-card-img">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop" alt="Climate policy" />
+            </div>
+            <div class="insight-card-meta">
+              <span class="insight-tag">Climate Solutions</span>
+              <span class="insight-read">5 min read</span>
+            </div>
+            <h3 class="insight-card-title">Canada's embodied carbon policy landscape in 2026</h3>
+            <p class="insight-card-excerpt">A review of federal and provincial policies targeting embodied carbon in the built environment.</p>
+            <span class="insight-link">Read more <span class="arrow">→</span></span>
+          </a>
+
+          <a href="#" class="insight-card">
+            <div class="insight-card-img">
+              <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?w=400&h=300&fit=crop" alt="Digital twin" />
+            </div>
+            <div class="insight-card-meta">
+              <span class="insight-tag">Digital Technology</span>
+              <span class="insight-read">5 min read</span>
+            </div>
+            <h3 class="insight-card-title">Digital twins and the future of building performance</h3>
+            <p class="insight-card-excerpt">How real-time digital models are transforming how we design, build, and operate buildings.</p>
+            <span class="insight-link">Read more <span class="arrow">→</span></span>
+          </a>
+
+          <a href="#" class="insight-card">
+            <div class="insight-card-img">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop" alt="Mass timber building" />
+            </div>
+            <div class="insight-card-meta">
+              <span class="insight-tag">Mass Timber</span>
+              <span class="insight-read">5 min read</span>
+            </div>
+            <h3 class="insight-card-title">The case for tall wood: mass timber beyond six storeys</h3>
+            <p class="insight-card-excerpt">Examining the engineering, economics, and regulation of tall mass timber buildings in Canada.</p>
+            <span class="insight-link">Read more <span class="arrow">→</span></span>
+          </a>
+
+          <a href="#" class="insight-card">
+            <div class="insight-card-img">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" alt="Construction innovation" />
+            </div>
+            <div class="insight-card-meta">
+              <span class="insight-tag">Construction Innovation</span>
+              <span class="insight-read">5 min read</span>
+            </div>
+            <h3 class="insight-card-title">Modular construction: scaling up without scaling costs</h3>
+            <p class="insight-card-excerpt">Lessons from leading modular builders on keeping quality high and costs predictable at scale.</p>
+            <span class="insight-link">Read more <span class="arrow">→</span></span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PREFAB NAVIGATOR CTA ========== -->
+    <section class="insights-prefab-cta">
+      <div class="container">
+        <div class="prefab-cta-inner reveal">
+          <div class="prefab-cta-text">
+            <h2 class="prefab-cta-title">Explore the Prefab Navigator</h2>
+            <p class="prefab-cta-desc">Our interactive tool helps you find the right prefabrication strategy for your project — from panelized to volumetric modular.</p>
+            <div class="prefab-cta-actions">
+              <a href="index.html#prefab" class="btn btn-dark">Get started<span class="arrow">→</span></a>
+              <a href="index.html#prefab" class="btn btn-outline">Learn more<span class="arrow">→</span></a>
+            </div>
+          </div>
+          <div class="prefab-cta-img">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" alt="Prefabricated building" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BOTTOM CTA ========== -->
+    <section class="insights-bottom-cta">
+      <div class="container">
+        <div class="bottom-cta-inner reveal">
+          <div class="bottom-cta-left">
+            <h2 class="bottom-cta-title">Have a challenge we can help <em class="serif">solve?</em></h2>
+          </div>
+          <div class="bottom-cta-right">
+            <p class="bottom-cta-desc">Whether you need research, strategy, or hands-on advisory — we'd love to hear from you. Let's build something better together.</p>
+            <div class="bottom-cta-actions">
+              <a href="contact.html" class="btn btn-lime">Contact us<span class="arrow">→</span></a>
+              <a href="work.html" class="btn btn-outline">See our work<span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- ========== /PAGE CONTENT ========== -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <a href="index.html"><img class="f-logo" src="assets/scius-logo-dark.png" alt="Scius Advisory" /></a>
+        <nav class="footer-nav">
+          <a href="about.html">About</a>
+          <a href="team.html">Team</a>
+          <a href="work.html">Our Work</a>
+          <a href="insights.html">Insights</a>
+          <a href="index.html#prefab">Prefab Navigator</a>
+          <a href="contact.html">Contact us</a>
+        </nav>
+        <a class="footer-social" href="https://www.linkedin.com/company/scius-advisory/" aria-label="LinkedIn">in</a>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Scius Advisory Inc. All rights reserved.</div>
+        <div class="legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookies Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SITE BEHAVIOUR ========== -->
+  <script src="script.js"></script>
+
+</body>
+</html>
