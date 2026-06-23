@@ -219,3 +219,24 @@ if (mobileNav && navToggle) {
   if (prev) prev.addEventListener('click', () => { if (current > 1) showPage(current - 1); });
   if (next) next.addEventListener('click', () => { if (current < total) showPage(current + 1); });
 })();
+
+// Parallax scroll for prefab images
+(function () {
+  const imgs = document.querySelectorAll('.parallax-img');
+  if (!imgs.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function update() {
+    const wh = window.innerHeight;
+    imgs.forEach(img => {
+      const parent = img.parentElement;
+      const rect = parent.getBoundingClientRect();
+      // 0 when element enters bottom, 1 when it exits top
+      const progress = 1 - (rect.bottom / (wh + rect.height));
+      // Shift image between -15% and +15% of its extra height
+      const shift = (progress - 0.5) * 30;
+      img.style.transform = 'translateY(' + shift + '%)';
+    });
+    requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+})();
