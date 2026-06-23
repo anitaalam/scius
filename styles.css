@@ -231,7 +231,6 @@ em.serif {
 /* Subtle placeholder treatment so empty image slots read as image zones */
 .img-ph {
   background-color: #e6e6e2;
-  background-image: repeating-linear-gradient(45deg, rgba(49,48,46,.05) 0 11px, transparent 11px 22px);
 }
 
 .hero {
