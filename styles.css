@@ -626,12 +626,12 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .nums-img { position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 460px; align-self: stretch; }
 
 /* ---------- Testimonial carousel ---------- */
-.tst { position: relative; max-width: 860px; margin-inline: auto; text-align: center; }
+.tst { position: relative; max-width: 1000px; margin-inline: auto; text-align: center; }
 .tst .wm { font-size: 22px; font-weight: 700; color: var(--moss); letter-spacing: -0.01em; }
 .tst-track { position: relative; margin-top: 30px; min-height: 220px; }
 .tst-slide { position: absolute; inset: 0; opacity: 0; transition: opacity .5s ease; pointer-events: none; display: flex; flex-direction: column; align-items: center; }
 .tst-slide.active { opacity: 1; pointer-events: auto; position: relative; }
-.tst blockquote { font-size: clamp(20px, 2.1vw, 27px); font-weight: 600; color: var(--charcoal); line-height: 1.42; letter-spacing: -0.01em; max-width: 24ch; margin: 0 auto; }
+.tst blockquote { font-size: clamp(20px, 2.1vw, 27px); font-weight: 600; color: var(--charcoal); line-height: 1.42; letter-spacing: -0.01em; max-width: 38ch; margin: 0 auto; }
 .tst .who { margin-top: 26px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .tst .who .av { width: 48px; height: 48px; border-radius: 50%; background: var(--offwhite); display: grid; place-items: center; font-weight: 700; color: var(--moss); font-size: 15px; border: 1px solid rgba(49,48,46,.1); }
 .tst .who .nm { font-weight: 700; color: var(--charcoal); font-size: 15px; }
