@@ -1126,6 +1126,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(24px, 3vw, 40px);
+  align-items: start;
 }
 
 /* Big featured card (left) */
@@ -1207,6 +1208,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   border-radius: var(--radius);
   overflow: hidden;
   aspect-ratio: 4/3;
+  flex-shrink: 0;
 }
 .featured-card--small .featured-card-img img {
   width: 100%;
@@ -1236,7 +1238,8 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .insight-card {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .insight-card-img {
   border-radius: var(--radius);
@@ -1244,11 +1247,13 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   aspect-ratio: 4/3;
   margin-bottom: 14px;
   background: var(--offwhite);
+  flex-shrink: 0;
 }
 .insight-card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform .5s ease;
 }
 .insight-card:hover .insight-card-img img {
