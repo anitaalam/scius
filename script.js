@@ -186,3 +186,35 @@ if (mobileNav && navToggle) {
     tstEl.addEventListener('mouseleave', () => { timer = setInterval(() => go(i + 1), 6000); });
   }
 })();
+
+// ===== Blog Pagination =====
+(() => {
+  const pages = document.querySelectorAll('.insights-grid[data-page]');
+  const nums = document.querySelectorAll('.pagination-num[data-page]');
+  const prev = document.querySelector('.pagination-prev');
+  const next = document.querySelector('.pagination-next');
+  if (!pages.length) return;
+
+  let current = 1;
+  const total = pages.length;
+
+  function showPage(n) {
+    current = n;
+    pages.forEach(p => {
+      p.style.display = +p.dataset.page === n ? '' : 'none';
+    });
+    nums.forEach(b => {
+      b.classList.toggle('active', +b.dataset.page === n);
+    });
+    if (prev) prev.disabled = n === 1;
+    if (next) next.disabled = n === total;
+
+    // Scroll to top of grid section
+    const section = document.querySelector('.insights-grid-section');
+    if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  nums.forEach(b => b.addEventListener('click', () => showPage(+b.dataset.page)));
+  if (prev) prev.addEventListener('click', () => { if (current > 1) showPage(current - 1); });
+  if (next) next.addEventListener('click', () => { if (current < total) showPage(current + 1); });
+})();
