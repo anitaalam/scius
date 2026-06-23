@@ -422,6 +422,8 @@ h2.section-title em.serif { color: var(--moss); }
 .work-card .wc-meta .loc { font-size: 14px; color: rgba(255,255,255,.78); margin-top: 3px; }
 a.work-card { display: block; text-decoration: none; color: inherit; cursor: pointer; }
 .wc-arrow { position: absolute; bottom: 24px; right: 26px; z-index: 3; width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.3); display: grid; place-items: center; font-size: 18px; color: #fff; transition: all 0.3s ease; }
+.work-card img { transition: transform 0.5s ease; }
+.work-card:hover img { transform: scale(1.05); }
 .work-card:hover .wc-arrow { background: var(--lime); border-color: var(--lime); color: var(--charcoal); }
 .work-card.big { flex: 1; min-height: 620px; }
 .work-card.tall { min-height: 372px; }
