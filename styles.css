@@ -396,11 +396,13 @@ h2.section-title em.serif { color: var(--moss); }
 
 .wwd-media { position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 540px; position: sticky; top: 100px; }
 .wwd-media image-slot { position: absolute; inset: 0; width: 100%; height: 100%; }
-.wm-badge-text {
-  margin-top: 16px;
+.wwd-media .wm-badge {
+  position: absolute; left: 24px; bottom: 24px; z-index: 3;
+  padding: 16px 22px; border-radius: 14px;
+  max-width: 70%;
 }
-.wm-badge-text .t { font-weight: 700; color: var(--charcoal); font-size: 16px; }
-.wm-badge-text .s { font-size: 13px; color: #6a6862; margin-top: 3px; }
+.wwd-media .wm-badge .t { font-weight: 700; color: var(--white); font-size: 16px; }
+.wwd-media .wm-badge .s { font-size: 13px; color: rgba(255,255,255,.75); margin-top: 3px; }
 
 /* ---------- Latest work ---------- */
 .work-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 44px; }
