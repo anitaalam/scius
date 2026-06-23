@@ -782,6 +782,13 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .work-row-tags span + span::before {
   content: "·"; margin-right: 8px; color: var(--moss);
 }
+.work-row-desc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--grey);
+  margin: 12px 0 20px;
+  max-width: 480px;
+}
 .work-row-link {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 14px; font-weight: 600; color: var(--charcoal);
