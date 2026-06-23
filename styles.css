@@ -395,13 +395,13 @@ h2.section-title em.serif { color: var(--moss); }
 .service:hover h3 { color: var(--moss); }
 
 .wwd-right { position: sticky; top: 100px; }
-.wwd-media { position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 540px; }
+.wwd-media { position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 440px; }
 .wwd-media image-slot { position: absolute; inset: 0; width: 100%; height: 100%; }
 .wm-badge {
   margin-top: 16px;
 }
-.wm-badge .t { font-weight: 600; color: #31302E; font-size: 16px; }
-.wm-badge .s { font-size: 14.5px; color: #31302E; margin-top: 4px; }
+.wm-badge .t { font-weight: 600; color: var(--charcoal); font-size: 24px; letter-spacing: -0.01em; }
+.wm-badge .s { font-size: 14.5px; color: #6a6862; margin-top: 5px; }
 
 /* ---------- Latest work ---------- */
 .work-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 44px; }
