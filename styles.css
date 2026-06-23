@@ -1126,7 +1126,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(24px, 3vw, 40px);
-  align-items: start;
+  align-items: stretch;
 }
 
 /* Big featured card (left) */
@@ -1135,10 +1135,15 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   color: inherit;
   display: block;
 }
+.featured-card--big {
+  display: flex;
+  flex-direction: column;
+}
 .featured-card--big .featured-card-img {
   border-radius: var(--radius);
   overflow: hidden;
-  aspect-ratio: 4/3;
+  flex: 1 1 auto;
+  min-height: 0;
   margin-bottom: 16px;
 }
 .featured-card--big .featured-card-img img {
