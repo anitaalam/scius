@@ -1183,7 +1183,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .featured-tag {
   font-size: 13px;
   font-weight: 600;
-  color: var(--lime);
+  color: var(--moss);
 }
 .featured-read {
   font-size: 13px;
@@ -1292,7 +1292,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .insight-tag {
   font-size: 13px;
   font-weight: 600;
-  color: var(--lime);
+  color: var(--moss);
 }
 .insight-read {
   font-size: 13px;
