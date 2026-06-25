@@ -863,19 +863,6 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   margin-bottom: clamp(40px, 6vw, 72px);
 }
 
-.contact-grid {
-  display: grid; grid-template-columns: 1fr 1.4fr;
-  gap: clamp(32px, 5vw, 72px); align-items: stretch;
-}
-.contact-img-stack {
-  display: flex; flex-direction: column;
-  gap: 12px; align-self: stretch;
-}
-.contact-img-stack img {
-  width: 100%; flex: 1; min-height: 0;
-  object-fit: cover; display: block;
-  border-radius: var(--radius);
-}
 .contact-details {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -901,46 +888,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 .contact-card a:hover { color: var(--charcoal); }
 
-/* Contact right column */
-.contact-right { display: flex; flex-direction: column; }
 
-/* Contact form */
-.contact-form-wrap {
-  padding-top: clamp(32px, 4vw, 48px);
-  margin-top: clamp(24px, 3vw, 36px);
-
-}
-.contact-form-title {
-  font-size: clamp(18px, 2vw, 22px); font-weight: 700;
-  color: var(--charcoal); letter-spacing: -0.02em;
-  margin-bottom: clamp(16px, 2vw, 24px);
-}
-.contact-form { max-width: 680px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.form-group { margin-bottom: 20px; }
-.form-group label {
-  display: block; font-size: 13px; font-weight: 600;
-  color: var(--charcoal); margin-bottom: 8px;
-}
-.form-group input,
-.form-group textarea {
-  width: 100%; padding: 14px 16px;
-  border: 1px solid rgba(0,0,0,0.12); border-radius: 10px;
-  background: var(--white); font-family: var(--font-sans);
-  font-size: 14px; color: var(--charcoal);
-  transition: border-color .3s ease;
-  resize: vertical;
-}
-.form-group input::placeholder,
-.form-group textarea::placeholder { color: var(--grey); }
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none; border-color: var(--moss);
-}
-
-@media (max-width: 760px) {
-  .form-row { grid-template-columns: 1fr; }
-}
 
 /* FAQ section */
 .contact-faq {
@@ -997,14 +945,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 
 /* Contact responsive */
-@media (max-width: 1000px) {
-  .contact-grid { grid-template-columns: 1fr 1fr; }
-  .contact-img-stack { display: none; }
-}
 @media (max-width: 760px) {
-  .contact-grid { grid-template-columns: 1fr; }
-  .contact-img-stack { display: flex; flex-direction: row; gap: 8px; max-height: 200px; }
-  .contact-img-stack img { border-radius: 10px; }
   .contact-details { grid-template-columns: 1fr; }
   .contact-card:nth-child(odd) { padding-right: 0; }
   .contact-card:nth-child(even) { padding-left: 0; }
