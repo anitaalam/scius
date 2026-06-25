@@ -703,8 +703,8 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .work-hero-img--right { aspect-ratio: 3/4; margin-top: -20px; }
 .work-hero-center { padding-top: clamp(12px, 2vw, 24px); }
 .work-hero-title {
-  font-size: clamp(48px, 6vw, 80px); font-weight: 700;
-  color: var(--charcoal); letter-spacing: -0.025em; line-height: 1;
+  font-size: clamp(38px, 4.6vw, 58px); font-weight: 700;
+  color: var(--charcoal); letter-spacing: -0.025em; line-height: 1.04;
   margin-bottom: clamp(20px, 3vw, 36px);
 }
 .work-hero-desc {
