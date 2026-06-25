@@ -266,7 +266,7 @@ em.serif {
 .hero p.lede {
   margin-top: 24px;
   font-size: clamp(16px, 1.3vw, 19px);
-  color: #55534f;
+  color: var(--grey);
   max-width: 46ch;
   line-height: 1.6;
 }
@@ -308,7 +308,7 @@ h2.section-title em.serif { color: var(--moss); }
   gap: 60px;
   align-items: end;
 }
-.about-head .lead-col p { font-size: 17px; color: #55534f; margin-bottom: 18px; }
+.about-head .lead-col p { font-size: 17px; color: var(--grey); margin-bottom: 18px; }
 .about-head .lead-col p:first-child { font-size: 19px; color: var(--charcoal); }
 
 .prefab-grid {
@@ -382,7 +382,7 @@ h2.section-title em.serif { color: var(--moss); }
 .service:last-child { border-bottom: 1px solid rgba(49,48,46,.14); }
 .service .idx { font-size: 13px; color: var(--grey); font-weight: 600; font-variant-numeric: tabular-nums; }
 .service h3 { font-size: 24px; font-weight: 600; color: var(--charcoal); letter-spacing: -0.01em; }
-.service p { font-size: 14.5px; color: #6a6862; margin-top: 5px; max-width: 50ch; }
+.service p { font-size: 14.5px; color: var(--grey); margin-top: 5px; max-width: 50ch; }
 .service .svc-arrow {
   width: 46px; height: 46px; border-radius: 50%;
   border: 1.5px solid rgba(49,48,46,.2);
@@ -401,7 +401,7 @@ h2.section-title em.serif { color: var(--moss); }
   margin-top: 16px;
 }
 .wm-badge .t { font-weight: 600; color: var(--charcoal); font-size: 24px; letter-spacing: -0.01em; }
-.wm-badge .s { font-size: 14.5px; color: #6a6862; margin-top: 5px; }
+.wm-badge .s { font-size: 14.5px; color: var(--grey); margin-top: 5px; }
 
 /* ---------- Latest work ---------- */
 .work-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 44px; }
@@ -467,7 +467,7 @@ a.work-card { display: block; text-decoration: none; color: inherit; cursor: poi
 }
 .footer-main .f-logo { width: 116px; }
 .footer-nav { display: flex; gap: 34px; flex-wrap: wrap; }
-.footer-nav a { font-size: 15px; color: #55534f; transition: color .2s ease; }
+.footer-nav a { font-size: 15px; color: var(--grey); transition: color .2s ease; }
 .footer-nav a:hover { color: var(--moss); }
 .footer-social {
   width: 40px; height: 40px; border-radius: 50%;
@@ -597,7 +597,7 @@ body:has(section[data-screen-label="About hero"]) .hero h1 {
 body:has(section[data-screen-label="About hero"]) .hero p.sub {
   margin: 26px auto 0;
   font-size: clamp(16px, 1.35vw, 20px);
-  color: #55534f;
+  color: var(--grey);
   max-width: 60ch;
 }
 
@@ -605,7 +605,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .story-head { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: start; }
 .story-head .eyebrow { margin-bottom: 18px; }
 .story-head h2 { max-width: 16ch; }
-.story-body p { font-size: 17px; color: #55534f; margin-bottom: 16px; }
+.story-body p { font-size: 17px; color: var(--grey); margin-bottom: 16px; }
 .story-body p:first-child { font-size: 19px; color: var(--charcoal); }
 .story-body p:last-child { margin-bottom: 0; }
 .story-img { margin-top: clamp(40px, 5vw, 64px); width: 100%; aspect-ratio: 16 / 8; border-radius: var(--radius-lg); overflow: hidden; position: relative; }
@@ -620,11 +620,11 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 /* ---------- By the numbers ---------- */
 .nums-grid { display: grid; grid-template-columns: 1fr 0.92fr; gap: clamp(40px, 5vw, 76px); align-items: center; }
 .nums-head h2 { max-width: 14ch; }
-.nums-head p { font-size: 16.5px; color: #55534f; margin-top: 20px; max-width: 46ch; }
+.nums-head p { font-size: 16.5px; color: var(--grey); margin-top: 20px; max-width: 46ch; }
 .num-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 36px; margin-top: 40px; }
 .num-stat .n { font-size: clamp(34px, 3.6vw, 50px); font-weight: 700; letter-spacing: -0.02em; line-height: 1; color: var(--charcoal); }
 .num-stat .n span { color: var(--moss); }
-.num-stat .l { font-size: 14.5px; color: #6a6862; margin-top: 8px; }
+.num-stat .l { font-size: 14.5px; color: var(--grey); margin-top: 8px; }
 .nums-img { position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 460px; align-self: stretch; }
 
 /* ---------- Testimonial carousel ---------- */
@@ -670,7 +670,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .team-intro { position: sticky; top: 116px; }
 .team-intro .eyebrow { margin-bottom: 20px; }
 .team-intro h1 { font-size: clamp(38px, 4.6vw, 58px); line-height: 1.04; letter-spacing: -0.025em; font-weight: 700; color: var(--charcoal); }
-.team-intro p { font-size: 16.5px; color: #55534f; margin-top: 22px; max-width: 36ch; }
+.team-intro p { font-size: 16.5px; color: var(--grey); margin-top: 22px; max-width: 36ch; }
 .team-intro .btn { margin-top: 30px; }
 
 .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 4vw, 54px) clamp(28px, 3vw, 40px); }
@@ -679,7 +679,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .tm-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .tm-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-top: 20px; }
 .tm-name { font-size: 19px; font-weight: 700; color: var(--charcoal); letter-spacing: -0.01em; line-height: 1.2; }
-.tm-role { font-size: 14.5px; color: #6a6862; margin-top: 2px; }
+.tm-role { font-size: 14.5px; color: var(--grey); margin-top: 2px; }
 .tm-li {
   flex: none; width: 34px; height: 34px; border-radius: 9px; background: var(--charcoal);
   display: grid; place-items: center; color: var(--white); transition: background .25s ease, transform .25s ease;
@@ -1079,7 +1079,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   margin-bottom: 28px;
 }
 .bio-body p {
-  font-size: 16px; line-height: 1.7; color: #55534f; margin-bottom: 18px;
+  font-size: 16px; line-height: 1.7; color: var(--grey); margin-bottom: 18px;
 }
 .bio-body p:last-child { margin-bottom: 0; }
 
