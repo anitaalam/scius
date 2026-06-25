@@ -100,26 +100,80 @@ if (mobileNav && navToggle) {
   });
 })();
 
-// Work page category filter
+// Work page: filter + pagination
 (function () {
-  const btns = document.querySelectorAll('.filter-btn');
-  const rows = document.querySelectorAll('.work-row');
-  if (!btns.length || !rows.length) return;
+  const PER_PAGE = 9;
+  const grid = document.getElementById('workGrid');
+  const allCards = grid ? Array.from(grid.querySelectorAll('.work-card')) : [];
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const paginationNav = document.getElementById('workPagination');
+  const numsWrap = document.getElementById('workPaginationNums');
+  if (!grid || !allCards.length) return;
 
-  btns.forEach(btn => {
+  let filtered = allCards;
+  let currentPage = 1;
+
+  function getFiltered() {
+    const activeBtn = document.querySelector('.filter-btn.active');
+    const cat = activeBtn ? activeBtn.dataset.filter : 'all';
+    if (cat === 'all') return allCards;
+    return allCards.filter(c => c.dataset.category && c.dataset.category.split(' ').includes(cat));
+  }
+
+  function render() {
+    filtered = getFiltered();
+    const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
+    if (currentPage > totalPages) currentPage = totalPages;
+
+    // Hide all, then show current page
+    allCards.forEach(c => { c.hidden = true; });
+    const start = (currentPage - 1) * PER_PAGE;
+    const pageItems = filtered.slice(start, start + PER_PAGE);
+    pageItems.forEach(c => { c.hidden = false; });
+
+    // Build pagination numbers
+    numsWrap.innerHTML = '';
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement('button');
+      btn.className = 'pagination-num' + (i === currentPage ? ' active' : '');
+      btn.dataset.page = i;
+      btn.textContent = i;
+      btn.addEventListener('click', () => { currentPage = i; render(); });
+      numsWrap.appendChild(btn);
+    }
+
+    // Prev / next
+    const prevBtn = paginationNav.querySelector('.pagination-prev');
+    const nextBtn = paginationNav.querySelector('.pagination-next');
+    prevBtn.disabled = currentPage <= 1;
+    nextBtn.disabled = currentPage >= totalPages;
+
+    // Show/hide pagination
+    paginationNav.style.display = totalPages <= 1 ? 'none' : '';
+
+    // Re-trigger reveal for newly visible cards
+    pageItems.forEach(c => {
+      c.classList.remove('in');
+      void c.offsetWidth;
+      c.classList.add('in');
+    });
+  }
+
+  // Filter buttons
+  filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      btns.forEach(b => b.classList.remove('active'));
+      filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const cat = btn.dataset.filter;
-      rows.forEach(row => {
-        if (cat === 'all' || row.dataset.category === cat) {
-          row.style.display = '';
-        } else {
-          row.style.display = 'none';
-        }
-      });
+      currentPage = 1;
+      render();
     });
   });
+
+  // Prev / next
+  paginationNav.querySelector('.pagination-prev').addEventListener('click', () => { currentPage--; render(); });
+  paginationNav.querySelector('.pagination-next').addEventListener('click', () => { currentPage++; render(); });
+
+  render();
 })();
 
 // Count-up animation (about page — Our Impact)
