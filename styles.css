@@ -1125,6 +1125,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   max-width: 680px;
   margin: 16px 0 0;
 }
+.insights-title em.serif { color: var(--moss); }
 .insights-sub {
   font-size: clamp(15px, 1.4vw, 17px);
   color: var(--grey);
