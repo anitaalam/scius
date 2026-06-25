@@ -1255,7 +1255,8 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 
 /* All posts grid — 3 columns */
 .insights-grid-section {
-  padding: clamp(40px, 5vw, 72px) 0 clamp(60px, 8vw, 100px);
+  padding: clamp(60px, 7vw, 100px) 0 clamp(60px, 8vw, 100px);
+  background: var(--offwhite);
 }
 .insights-grid {
   display: grid;
