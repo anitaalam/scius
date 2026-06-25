@@ -863,6 +863,17 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   margin-bottom: clamp(40px, 6vw, 72px);
 }
 
+.contact-layout {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 64px); align-items: start;
+}
+.contact-img {
+  border-radius: var(--radius-lg); overflow: hidden;
+}
+.contact-img img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  aspect-ratio: 4/3;
+}
 .contact-details {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -946,6 +957,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 
 /* Contact responsive */
 @media (max-width: 760px) {
+  .contact-layout { grid-template-columns: 1fr; }
   .contact-details { grid-template-columns: 1fr; }
   .contact-card:nth-child(odd) { padding-right: 0; }
   .contact-card:nth-child(even) { padding-left: 0; }
