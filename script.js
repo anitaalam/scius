@@ -102,7 +102,7 @@ if (mobileNav && navToggle) {
 
 // Work page: filter + pagination
 (function () {
-  const PER_PAGE = 9;
+  const PER_PAGE = 6;
   const grid = document.getElementById('workGrid');
   const allCards = grid ? Array.from(grid.querySelectorAll('.work-card')) : [];
   const filterBtns = document.querySelectorAll('.filter-btn');
