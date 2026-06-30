@@ -288,7 +288,9 @@ if (mobileNav && navToggle) {
       const progress = 1 - (rect.bottom / (wh + rect.height));
       // Shift image between -15% and +15% of its extra height
       const shift = (progress - 0.5) * 30;
-      img.style.transform = 'translateY(' + shift + '%)';
+      const isHovered = parent.matches(':hover');
+      const scale = isHovered ? 'scale(1.15)' : '';
+      img.style.transform = 'translateY(' + shift + '%) ' + scale;
     });
     requestAnimationFrame(update);
   }
