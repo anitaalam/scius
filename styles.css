@@ -333,7 +333,7 @@ h2.section-title em.serif { color: var(--moss); }
   will-change: transform;
   transition: transform 0.5s ease;
 }
-.prefab-main image-slot { position: absolute; inset: 0; width: 100%; height: 100%; }
+
 .prefab-main .pf-overlay {
   position: absolute; inset: 0; z-index: 2; pointer-events: none;
   background: linear-gradient(0deg, rgba(28,27,25,.78) 0%, rgba(28,27,25,0) 55%);
@@ -355,7 +355,6 @@ h2.section-title em.serif { color: var(--moss); }
 .prefab-card {
   position: relative; border-radius: var(--radius-lg); overflow: hidden;
 }
-.prefab-card image-slot { position: absolute; inset: 0; width: 100%; height: 100%; }
 .prefab-card .pc-overlay {
   position: absolute; inset: 0; z-index: 2; pointer-events: none;
   background: linear-gradient(0deg, rgba(28,27,25,.7) 0%, rgba(28,27,25,0) 60%);
@@ -397,7 +396,6 @@ h2.section-title em.serif { color: var(--moss); }
 
 .wwd-right { position: sticky; top: 100px; }
 .wwd-media { position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 440px; }
-.wwd-media image-slot { position: absolute; inset: 0; width: 100%; height: 100%; }
 .wm-badge {
   margin-top: 16px;
 }
@@ -409,7 +407,6 @@ h2.section-title em.serif { color: var(--moss); }
 .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
 .work-col { display: flex; flex-direction: column; gap: 24px; }
 .work-card { position: relative; border-radius: var(--radius-lg); overflow: hidden; }
-.work-card image-slot { position: absolute; inset: 0; width: 100%; height: 100%; }
 .work-card .wc-overlay {
   position: absolute; inset: 0; z-index: 2; pointer-events: none;
   background: linear-gradient(0deg, rgba(28,27,25,.74) 0%, rgba(28,27,25,0) 58%);
@@ -703,10 +700,9 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   gap: clamp(20px, 3vw, 40px);
   align-items: start;
 }
-.work-hero-img { border-radius: var(--radius-lg); overflow: hidden; position: relative; }
+.work-hero-img { border-radius: var(--radius-lg); overflow: hidden; }
 .work-hero-img img {
-  width: 100%; height: 120%; object-fit: cover; display: block;
-  position: absolute; inset: -10% 0; /* extra height for parallax travel */
+  width: 100%; height: 100%; object-fit: cover; display: block;
   will-change: transform; transition: transform 0.05s linear;
 }
 .work-hero-img--left { aspect-ratio: 4/3; }

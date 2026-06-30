@@ -274,7 +274,7 @@ if (mobileNav && navToggle) {
   if (next) next.addEventListener('click', () => { if (current < total) showPage(current + 1); });
 })();
 
-// Parallax scroll for work-hero images
+// Scroll-driven zoom for work-hero images
 (function () {
   const heroImgs = document.querySelectorAll('.work-hero-img');
   if (!heroImgs.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -285,13 +285,11 @@ if (mobileNav && navToggle) {
       const img = container.querySelector('img');
       if (!img) return;
       const rect = container.getBoundingClientRect();
-      // 0 when element enters bottom of viewport, 1 when it exits top
-      const progress = 1 - (rect.bottom / (wh + rect.height));
-      // Reverse direction for the right image to create staggered depth
-      const direction = container.classList.contains('work-hero-img--right') ? -1 : 1;
-      // Shift image within its extra 20% height range
-      const shift = (progress - 0.5) * 20 * direction;
-      img.style.transform = 'translateY(' + shift + '%)';
+      // 0 when element enters bottom, 1 when it exits top
+      const progress = Math.min(Math.max(1 - (rect.bottom / (wh + rect.height)), 0), 1);
+      // Scale from 1.0 → 1.15 as user scrolls down; zooms back out on scroll up
+      const scale = 1 + progress * 0.15;
+      img.style.transform = 'scale(' + scale + ')';
     });
     requestAnimationFrame(update);
   }
