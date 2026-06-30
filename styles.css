@@ -686,6 +686,10 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 .tm-li:hover { background: var(--moss); transform: translateY(-2px); }
 .tm-li svg { width: 17px; height: 17px; }
+.tm-socials { display: flex; gap: 8px; }
+.bio-email { display: inline-block; font-size: 15px; color: var(--moss); text-decoration: none; margin-top: 4px; }
+.bio-email:hover { text-decoration: underline; }
+.bio-socials { display: flex; gap: 10px; margin-top: 8px; margin-bottom: 28px; }
 
 /* ===== WORK PAGE ===== */
 
@@ -1031,7 +1035,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .bio-name {
   font-size: clamp(28px, 3.2vw, 42px); font-weight: 700;
   color: var(--charcoal); letter-spacing: -0.025em; line-height: 1.1;
-  margin-bottom: 28px;
+  margin-bottom: 6px;
 }
 .bio-body p {
   font-size: 16px; line-height: 1.7; color: var(--grey); margin-bottom: 18px;
