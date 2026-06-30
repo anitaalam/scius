@@ -282,14 +282,12 @@ if (mobileNav && navToggle) {
   function update() {
     const wh = window.innerHeight;
     heroImgs.forEach(container => {
-      const img = container.querySelector('img');
-      if (!img) return;
       const rect = container.getBoundingClientRect();
       // 0 when element enters bottom, 1 when it exits top
       const progress = Math.min(Math.max(1 - (rect.bottom / (wh + rect.height)), 0), 1);
-      // Scale from 1.0 → 1.15 as user scrolls down; zooms back out on scroll up
+      // Grow the container from 1.0 → 1.15 as user scrolls down; shrinks back on scroll up
       const scale = 1 + progress * 0.15;
-      img.style.transform = 'scale(' + scale + ')';
+      container.style.transform = 'scale(' + scale + ')';
     });
     requestAnimationFrame(update);
   }

@@ -700,10 +700,9 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   gap: clamp(20px, 3vw, 40px);
   align-items: start;
 }
-.work-hero-img { border-radius: var(--radius-lg); overflow: hidden; }
+.work-hero-img { border-radius: var(--radius-lg); overflow: hidden; will-change: transform; transition: transform 0.15s linear; }
 .work-hero-img img {
   width: 100%; height: 100%; object-fit: cover; display: block;
-  will-change: transform; transition: transform 0.05s linear;
 }
 .work-hero-img--left { aspect-ratio: 4/3; }
 .work-hero-img--right { aspect-ratio: 3/4; margin-top: -20px; }
