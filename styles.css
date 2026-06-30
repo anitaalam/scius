@@ -677,7 +677,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 4vw, 54px) clamp(28px, 3vw, 40px); }
 .tm-card { display: flex; flex-direction: column; }
 .tm-photo { position: relative; width: 100%; aspect-ratio: 1 / 1; border-radius: var(--radius-lg); overflow: hidden; }
-.tm-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.tm-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .tm-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-top: 20px; }
 .tm-name { font-size: 19px; font-weight: 700; color: var(--charcoal); letter-spacing: -0.01em; line-height: 1.2; }
 .tm-role { font-size: 14.5px; color: var(--grey); margin-top: 2px; }
