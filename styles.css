@@ -168,29 +168,29 @@ em.serif {
   pointer-events: auto;
 }
 .mobile-nav-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(28,27,25,.45);
-  opacity: 0;
-  transition: opacity .35s ease;
+  display: none;
 }
-.mobile-nav.open .mobile-nav-backdrop { opacity: 1; }
 .mobile-nav-panel {
   position: absolute;
-  top: 0; right: 0; bottom: 0;
-  width: min(340px, 85vw);
+  inset: 0;
+  width: 100%;
+  height: 100%;
   background: var(--white);
   padding: 28px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  transform: translateX(100%);
-  transition: transform .35s cubic-bezier(.4,0,.2,1);
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity .35s ease, transform .35s ease;
   overflow-y: auto;
 }
-.mobile-nav.open .mobile-nav-panel { transform: translateX(0); }
+.mobile-nav.open .mobile-nav-panel { opacity: 1; transform: scale(1); }
 .mobile-nav-close {
-  align-self: flex-end;
+  position: absolute;
+  top: 28px; right: 28px;
   width: 44px; height: 44px;
   border-radius: 50%;
   border: 1.5px solid rgba(49,48,46,.15);
@@ -201,31 +201,32 @@ em.serif {
   display: grid;
   place-items: center;
   transition: background .25s ease;
-  margin-bottom: 12px;
 }
 .mobile-nav-close:hover { background: var(--offwhite); }
 .mobile-nav-links {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0;
 }
 .mobile-nav-links a {
   display: block;
-  padding: 16px 4px;
-  font-size: 18px;
-  font-weight: 600;
+  padding: 18px 12px;
+  font-size: clamp(24px, 5vw, 32px);
+  font-weight: 700;
   color: var(--charcoal);
-  border-bottom: 1px solid rgba(49,48,46,.08);
-  transition: color .25s ease, padding-left .25s ease;
+  text-align: center;
+  border-bottom: none;
+  transition: color .25s ease;
 }
-.mobile-nav-links a:first-child { border-top: 1px solid rgba(49,48,46,.08); }
-.mobile-nav-links a:hover { color: var(--moss); padding-left: 8px; }
+.mobile-nav-links a:first-child { border-top: none; }
+.mobile-nav-links a:hover { color: var(--moss); }
 .mobile-nav-links a.active { color: var(--moss); }
 .mobile-nav-cta {
-  margin-top: auto;
-  padding-top: 24px;
+  margin-top: 32px;
+  padding-top: 0;
 }
-.mobile-nav-cta .btn { width: 100%; justify-content: center; }
+.mobile-nav-cta .btn { justify-content: center; }
 
 /* ---------- Hero ---------- */
 /* Subtle placeholder treatment so empty image slots read as image zones */
@@ -511,7 +512,7 @@ a.work-card { display: block; text-decoration: none; color: inherit; cursor: poi
 }
 @media (max-width: 760px) {
   :root { --gutter: 22px; }
-  .main-nav, .header-cta .btn span.lbl { display: none; }
+  .main-nav, .header-cta .btn { display: none; }
   .nav-toggle {
     display: inline-flex; align-items: center; justify-content: center;
     width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid rgba(49,48,46,.25);
@@ -880,31 +881,38 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .contact-img {
   border-radius: var(--radius-lg); overflow: hidden;
 }
-.contact-img img {
+.contact-slideshow {
+  position: relative; aspect-ratio: 4/3;
+}
+.contact-slideshow .slide {
+  position: absolute; inset: 0;
   width: 100%; height: 100%; object-fit: cover; display: block;
-  aspect-ratio: 4/3;
+  opacity: 0; transition: opacity 1.2s ease;
+}
+.contact-slideshow .slide.active {
+  opacity: 1;
 }
 .contact-details {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 0;
 }
 .contact-card {
-  padding: clamp(20px, 3vw, 32px) 0;
+  padding: clamp(24px, 3.5vw, 40px) 0;
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 .contact-card:nth-child(odd) { padding-right: clamp(16px, 3vw, 32px); }
 .contact-card:nth-child(even) { padding-left: clamp(16px, 3vw, 32px); }
 .contact-card h3 {
-  font-size: 15px; font-weight: 700; color: var(--charcoal);
-  margin-bottom: 8px;
+  font-size: clamp(16px, 1.6vw, 20px); font-weight: 700; color: var(--charcoal);
+  margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.04em;
 }
 .contact-card p {
-  font-size: 14px; line-height: 1.6; color: var(--grey);
+  font-size: clamp(15px, 1.5vw, 18px); line-height: 1.6; color: var(--grey);
   margin-bottom: 6px;
 }
 .contact-card a,
 .contact-card span {
-  font-size: 14px; font-weight: 500; color: var(--moss);
+  font-size: clamp(16px, 1.8vw, 22px); font-weight: 600; color: var(--moss);
   text-decoration: none; transition: color .3s ease;
 }
 .contact-card a:hover { color: var(--charcoal); }
