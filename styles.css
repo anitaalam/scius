@@ -1824,12 +1824,47 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 @media (max-width: 760px) {
   .article-hero { min-height: 50vh; }
-  .article-meta-inner { gap: 20px; }
+  .article-hero-content {
+    padding-bottom: clamp(36px, 5vw, 56px);
+    padding-top: clamp(120px, 14vw, 160px);
+  }
+  .article-hero-content h1 { font-size: clamp(28px, 6vw, 42px); }
+  .article-hero-sub { font-size: clamp(14px, 3.5vw, 18px); max-width: 100%; }
+  .article-meta-bar { padding: 20px 0; }
+  .article-meta-inner {
+    gap: 16px 24px; flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .article-meta-item { min-width: 120px; }
+  .article-meta-label { font-size: 12px; }
+  .article-meta-val { font-size: 15px; }
+  .article-section { margin-bottom: 36px; }
+  .article-section h2 { font-size: clamp(20px, 5vw, 28px); margin-bottom: 14px; }
+  .article-section h3 { font-size: clamp(16px, 4vw, 20px); }
+  .article-section p,
+  .article-section li { font-size: 15px; line-height: 1.75; }
+  .article-pullquote { margin: 36px 0; padding: 24px 24px; }
+  .article-pullquote p { font-size: clamp(16px, 4vw, 20px); }
+  .article-wide-img { margin: 36px 0; }
+  .article-wide-img figcaption { font-size: 12px; margin-top: 10px; }
+  .article-img-pair { grid-template-columns: 1fr; margin: 36px 0; }
+  .article-img-pair figcaption { font-size: 11px; }
   .article-related-grid { grid-template-columns: 1fr; }
-  .article-img-pair { grid-template-columns: 1fr; }
+  .article-related-body { padding: 16px 20px 20px; }
+  .article-related-card h3 { font-size: clamp(15px, 4vw, 18px); }
 }
 @media (max-width: 480px) {
   .article-hero { min-height: 40vh; }
-  .article-hero-content h1 { font-size: clamp(26px, 7vw, 36px); }
+  .article-hero-content h1 { font-size: clamp(24px, 7vw, 32px); }
+  .article-hero-sub { font-size: 14px; }
+  .article-hero-tags span { font-size: 10px; }
+  .article-back { font-size: 13px; margin-bottom: 20px; }
   .article-toc nav { flex-direction: column; }
+  .article-meta-inner { gap: 14px 20px; }
+  .article-meta-item { min-width: 100px; }
+  .article-section h2 { font-size: clamp(19px, 6vw, 26px); }
+  .article-pullquote { padding: 20px 18px; }
+  .article-pullquote p { font-size: 16px; }
+  .article-wide-img { margin: 28px 0; }
+  .article-img-pair { margin: 28px 0; gap: 16px; }
 }
