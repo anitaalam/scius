@@ -697,7 +697,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 /* ===== WORK PAGE ===== */
 
 /* Hero */
-.work-hero { padding: clamp(120px, 14vw, 180px) 0 clamp(40px, 5vw, 60px); }
+.work-hero { padding: clamp(120px, 14vw, 180px) 0 clamp(40px, 5vw, 60px); background: var(--offwhite); }
 .work-hero-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
@@ -760,7 +760,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 
 /* Filter bar */
-.work-filters { padding: clamp(40px, 5vw, 64px) 0 clamp(8px, 1vw, 12px); }
+.work-filters { padding: clamp(40px, 5vw, 64px) 0 clamp(8px, 1vw, 12px); background: var(--offwhite); }
 .filter-bar {
   display: flex; justify-content: space-between;
   overflow-x: auto; -webkit-overflow-scrolling: touch;
@@ -786,6 +786,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 /* Project card grid (work page) — portfolio style */
 .work-grid-section {
   padding: clamp(8px, 1vw, 16px) 0 clamp(60px, 8vw, 100px);
+  background: var(--offwhite);
 }
 .work-grid-section .work-grid {
   display: grid;
@@ -862,7 +863,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 /* ===== CONTACT PAGE ===== */
 
 /* Contact hero */
-.contact-hero { padding: clamp(120px, 14vw, 180px) 0 clamp(40px, 5vw, 60px); }
+.contact-hero { padding: clamp(120px, 14vw, 180px) 0 clamp(40px, 5vw, 60px); background: var(--offwhite); }
 .contact-title {
   font-size: clamp(38px, 4.6vw, 58px); font-weight: 700;
   color: var(--charcoal); letter-spacing: -0.025em; line-height: 1.04;
