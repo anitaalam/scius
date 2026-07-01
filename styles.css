@@ -1821,7 +1821,6 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   .article-toc nav { flex-direction: row; flex-wrap: wrap; gap: 0 16px; }
   .article-toc a { border-left: none; padding-left: 0; font-size: 13px; }
   .article-related-grid { grid-template-columns: repeat(2, 1fr); }
-  .article-img-pair { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 760px) {
   .article-hero { min-height: 50vh; }
