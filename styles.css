@@ -478,13 +478,13 @@ a.work-card { display: block; text-decoration: none; color: inherit; cursor: poi
 .footer-bottom {
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
   padding: 22px 0 34px; border-top: 1px solid rgba(49,48,46,.12); flex-wrap: wrap;
-  font-size: 13.5px; color: #8a8884;
+  font-size: 13.5px; color: var(--grey);
 }
-.footer-bottom .legal { display: flex; gap: 26px; flex-wrap: wrap; }
-.footer-bottom .legal a { color: #8a8884; transition: color .2s ease; }
+.footer-bottom .legal { display: flex; gap: 26px; flex-wrap: wrap; align-items: center; }
+.footer-bottom .legal a { color: var(--grey); transition: color .2s ease; }
 .footer-bottom .legal a:hover { color: var(--moss); }
-.footer-bottom .made-by { width: 100%; text-align: center; font-size: 12.5px; color: #a5a29e; margin-top: 4px; }
-.footer-bottom .made-by a { color: #a5a29e; transition: color .2s ease; }
+.footer-bottom .made-by { color: var(--grey); }
+.footer-bottom .made-by a { color: var(--grey); transition: color .2s ease; }
 .footer-bottom .made-by a:hover { color: var(--moss); }
 
 /* ---------- reveal ---------- */
