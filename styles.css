@@ -62,7 +62,7 @@ em.serif {
 .eyebrow::before {
   content: "";
   width: 26px; height: 2px;
-  background: var(--fresh);
+  background: #778335;
   display: inline-block;
 }
 
@@ -146,7 +146,7 @@ em.serif {
 }
 .main-nav a::after {
   content: ""; position: absolute; left: 0; bottom: -6px;
-  width: 0; height: 2px; background: var(--fresh);
+  width: 0; height: 2px; background: #778335;
   transition: width .25s ease;
 }
 .main-nav a:hover::after, .main-nav a.active::after { width: 100%; }
@@ -250,7 +250,7 @@ em.serif {
 .hero-media .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
 
 .hero-eyebrow { color: var(--moss); }
-.hero-eyebrow::before { background: var(--fresh); }
+.hero-eyebrow::before { background: #778335; }
 
 .hero h1 {
   font-size: clamp(36px, 4.4vw, 58px);
