@@ -598,7 +598,7 @@ body:has(section[data-screen-label="About hero"]) .hero h1 {
 }
 body:has(section[data-screen-label="About hero"]) .hero p.sub {
   margin: 26px auto 0;
-  font-size: clamp(16px, 1.35vw, 20px);
+  font-size: 16px;
   color: var(--grey);
   max-width: 60ch;
 }
@@ -607,8 +607,8 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .story-head { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: start; }
 .story-head .eyebrow { margin-bottom: 18px; }
 .story-head h2 { max-width: 16ch; }
-.story-body p { font-size: 17px; color: var(--grey); margin-bottom: 16px; }
-.story-body p:first-child { font-size: 19px; color: var(--charcoal); }
+.story-body p { font-size: 16px; color: var(--grey); margin-bottom: 16px; }
+.story-body p:first-child { font-size: 16px; color: var(--charcoal); }
 .story-body p:last-child { margin-bottom: 0; }
 .story-img { margin-top: clamp(40px, 5vw, 64px); width: 100%; aspect-ratio: 16 / 8; border-radius: var(--radius-lg); overflow: hidden; position: relative; }
 
@@ -672,7 +672,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .team-intro { position: sticky; top: 116px; }
 .team-intro .eyebrow { margin-bottom: 20px; }
 .team-intro h1 { font-size: clamp(38px, 4.6vw, 58px); line-height: 1.04; letter-spacing: -0.025em; font-weight: 700; color: var(--charcoal); }
-.team-intro p { font-size: 16.5px; color: var(--grey); margin-top: 22px; max-width: 36ch; }
+.team-intro p { font-size: 16px; color: var(--grey); margin-top: 22px; max-width: 36ch; }
 .team-intro .btn { margin-top: 30px; }
 
 .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 4vw, 54px) clamp(28px, 3vw, 40px); }
@@ -682,7 +682,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .tm-photo:hover img { transform: scale(1.15); }
 .tm-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-top: 20px; }
 .tm-name { font-size: 19px; font-weight: 700; color: var(--charcoal); letter-spacing: -0.01em; line-height: 1.2; }
-.tm-role { font-size: 14.5px; color: var(--grey); margin-top: 2px; }
+.tm-role { font-size: 16px; color: var(--grey); margin-top: 2px; }
 .tm-li {
   flex: none; width: 34px; height: 34px; border-radius: 9px; background: var(--charcoal);
   display: grid; place-items: center; color: var(--white); transition: background .25s ease, transform .25s ease;
@@ -717,7 +717,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   margin-bottom: clamp(20px, 3vw, 36px);
 }
 .work-hero-desc {
-  font-size: clamp(14px, 1.4vw, 16px); line-height: 1.7;
+  font-size: 16px; line-height: 1.7;
   color: var(--grey); max-width: 42ch;
 }
 .work-hero-row2 {
@@ -727,7 +727,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 .work-hero-img--bottom { aspect-ratio: 4/3; max-width: 320px; }
 .work-hero-desc2 {
-  font-size: clamp(14px, 1.4vw, 16px); line-height: 1.7;
+  font-size: 16px; line-height: 1.7;
   color: var(--grey); max-width: 48ch; padding-bottom: 8px;
 }
 
@@ -830,7 +830,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   margin-bottom: 10px; letter-spacing: -0.015em;
 }
 .work-card-excerpt {
-  font-size: 14.5px; color: var(--grey); line-height: 1.65; margin-bottom: 16px;
+  font-size: 16px; color: var(--grey); line-height: 1.65; margin-bottom: 16px;
   max-width: 52ch;
 }
 .work-card-link {
@@ -869,7 +869,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   margin-bottom: clamp(12px, 2vw, 20px);
 }
 .contact-subtitle {
-  font-size: clamp(14px, 1.4vw, 16px); line-height: 1.7;
+  font-size: 16px; line-height: 1.7;
   color: var(--grey); max-width: 40ch;
   margin-bottom: clamp(40px, 6vw, 72px);
 }
@@ -932,7 +932,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   margin-bottom: clamp(16px, 2vw, 24px);
 }
 .faq-intro p {
-  font-size: clamp(14px, 1.4vw, 16px); line-height: 1.7;
+  font-size: 16px; line-height: 1.7;
   color: #ffffff; margin-bottom: clamp(24px, 3vw, 36px);
 }
 .btn-outline-dark {
@@ -965,7 +965,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 .faq-item.open .faq-answer { max-height: 300px; padding-bottom: clamp(16px, 2vw, 24px); }
 .faq-answer p {
-  font-size: 14px; line-height: 1.7;
+  font-size: 16px; line-height: 1.7;
   color: #ffffff;
 }
 
@@ -1094,7 +1094,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 .insights-title em.serif { color: var(--moss); }
 .insights-sub {
-  font-size: clamp(15px, 1.4vw, 17px);
+  font-size: 16px;
   color: var(--grey);
   line-height: 1.7;
   max-width: 520px;
@@ -1170,7 +1170,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   margin-bottom: 8px;
 }
 .featured-card-excerpt {
-  font-size: 14.5px;
+  font-size: 16px;
   color: var(--grey);
   line-height: 1.6;
   margin-bottom: 12px;
@@ -1280,7 +1280,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   margin-bottom: 8px;
 }
 .insight-card-excerpt {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--grey);
   line-height: 1.6;
   margin-bottom: 12px;
