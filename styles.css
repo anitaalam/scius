@@ -1674,11 +1674,11 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   display: flex; flex-direction: column; gap: 4px;
 }
 .article-meta-label {
-  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
   font-weight: 600; color: var(--moss);
 }
 .article-meta-val {
-  font-size: 15px; font-weight: 600; color: var(--charcoal);
+  font-size: 17px; font-weight: 600; color: var(--charcoal);
 }
 
 /* Article Body Layout */
