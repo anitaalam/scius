@@ -1503,11 +1503,11 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 .proj-meta-item { display: flex; flex-direction: column; gap: 4px; }
 .proj-meta-label {
-  font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
   font-weight: 600; color: var(--moss);
 }
 .proj-meta-value {
-  font-size: 15px; font-weight: 600; color: var(--charcoal);
+  font-size: 17px; font-weight: 600; color: var(--charcoal);
 }
 
 /* Key Findings */
