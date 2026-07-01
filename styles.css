@@ -1752,7 +1752,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 
 /* Article Images */
 .article-wide-img {
-  margin: 48px 0; border-radius: var(--radius-lg); overflow: hidden;
+  margin: 48px 0;
 }
 .article-wide-img img {
   width: 100%; display: block; object-fit: cover;
