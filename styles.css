@@ -929,7 +929,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 .faq-intro p {
   font-size: clamp(14px, 1.4vw, 16px); line-height: 1.7;
-  color: rgba(255,255,255,0.65); margin-bottom: clamp(24px, 3vw, 36px);
+  color: #ffffff; margin-bottom: clamp(24px, 3vw, 36px);
 }
 .btn-outline-dark {
   display: inline-flex; align-items: center; gap: 8px;
@@ -962,7 +962,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .faq-item.open .faq-answer { max-height: 300px; padding-bottom: clamp(16px, 2vw, 24px); }
 .faq-answer p {
   font-size: 14px; line-height: 1.7;
-  color: rgba(255,255,255,0.6);
+  color: #ffffff;
 }
 
 /* Contact responsive */
