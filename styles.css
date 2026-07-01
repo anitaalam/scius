@@ -1832,10 +1832,10 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   .article-hero-sub { font-size: clamp(14px, 3.5vw, 18px); max-width: 100%; }
   .article-meta-bar { padding: 20px 0; }
   .article-meta-inner {
-    gap: 16px 24px; flex-wrap: wrap;
-    justify-content: flex-start;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
-  .article-meta-item { min-width: 120px; }
+  .article-meta-item:nth-child(even) { text-align: right; }
   .article-meta-label { font-size: 12px; }
   .article-meta-val { font-size: 15px; }
   .article-section { margin-bottom: 36px; }
@@ -1860,8 +1860,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   .article-hero-tags span { font-size: 10px; }
   .article-back { font-size: 13px; margin-bottom: 20px; }
   .article-toc nav { flex-direction: column; }
-  .article-meta-inner { gap: 14px 20px; }
-  .article-meta-item { min-width: 100px; }
+  .article-meta-inner { gap: 14px; }
   .article-section h2 { font-size: clamp(19px, 6vw, 26px); }
   .article-pullquote { padding: 20px 18px; }
   .article-pullquote p { font-size: 16px; }
