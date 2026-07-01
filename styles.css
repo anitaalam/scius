@@ -1511,6 +1511,10 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 
 /* Key Findings */
+.proj-findings-summary {
+  font-size: clamp(16px, 1.5vw, 19px); line-height: 1.7;
+  color: var(--charcoal); max-width: 800px; margin-top: 20px;
+}
 .proj-findings-grid {
   display: grid; grid-template-columns: repeat(4, 1fr);
   gap: clamp(20px, 3vw, 36px); margin-top: clamp(32px, 4vw, 48px);
