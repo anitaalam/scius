@@ -266,7 +266,7 @@ em.serif {
 
 .hero p.lede {
   margin-top: 24px;
-  font-size: clamp(16px, 1.3vw, 19px);
+  font-size: 16px;
   color: var(--grey);
   max-width: 46ch;
   line-height: 1.6;
@@ -282,7 +282,7 @@ em.serif {
   font-weight: 700; letter-spacing: -0.02em; line-height: 1; color: var(--white);
 }
 .stats-row .num span { color: var(--lime); }
-.stats-row .lbl { margin-top: 14px; font-size: 14.5px; color: rgba(255,255,255,.66); max-width: 22ch; line-height: 1.45; }
+.stats-row .lbl { margin-top: 14px; font-size: 16px; color: rgba(255,255,255,.66); max-width: 22ch; line-height: 1.45; }
 
 /* ---------- Section scaffold ---------- */
 section { position: relative; }
@@ -309,8 +309,8 @@ h2.section-title em.serif { color: var(--moss); }
   gap: 60px;
   align-items: end;
 }
-.about-head .lead-col p { font-size: 17px; color: var(--grey); margin-bottom: 18px; }
-.about-head .lead-col p:first-child { font-size: 19px; color: var(--charcoal); }
+.about-head .lead-col p { font-size: 16px; color: var(--grey); margin-bottom: 18px; }
+.about-head .lead-col p:first-child { font-size: 16px; color: var(--charcoal); }
 
 .prefab-grid {
   margin-top: 56px;
@@ -383,7 +383,7 @@ h2.section-title em.serif { color: var(--moss); }
 .service:last-child { border-bottom: 1px solid rgba(49,48,46,.14); }
 .service .idx { font-size: 13px; color: var(--grey); font-weight: 600; font-variant-numeric: tabular-nums; }
 .service h3 { font-size: 24px; font-weight: 600; color: var(--charcoal); letter-spacing: -0.01em; }
-.service p { font-size: 14.5px; color: var(--grey); margin-top: 5px; max-width: 50ch; }
+.service p { font-size: 16px; color: var(--grey); margin-top: 5px; max-width: 50ch; }
 .service .svc-arrow {
   width: 46px; height: 46px; border-radius: 50%;
   border: 1.5px solid rgba(49,48,46,.2);
@@ -401,7 +401,7 @@ h2.section-title em.serif { color: var(--moss); }
   margin-top: 16px;
 }
 .wm-badge .t { font-weight: 600; color: var(--charcoal); font-size: 24px; letter-spacing: -0.01em; }
-.wm-badge .s { font-size: 14.5px; color: var(--grey); margin-top: 5px; }
+.wm-badge .s { font-size: 16px; color: var(--grey); margin-top: 5px; }
 
 /* ---------- Latest work ---------- */
 .work-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 44px; }
@@ -436,7 +436,7 @@ a.work-card { display: block; text-decoration: none; color: inherit; cursor: poi
 .cta-inner { display: grid; grid-template-columns: 1.15fr 1fr; gap: 50px; align-items: center; position: relative; z-index: 2; }
 .cta-section h2 { font-size: clamp(30px, 4vw, 48px); font-weight: 700; color: var(--white); letter-spacing: -0.02em; line-height: 1.08; }
 .cta-section h2 em.serif { color: var(--lime); }
-.cta-section p { color: rgba(255,255,255,.78); font-size: 17px; margin-bottom: 28px; max-width: 46ch; }
+.cta-section p { color: rgba(255,255,255,.78); font-size: 16px; margin-bottom: 28px; max-width: 46ch; }
 .cta-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .cta-deco {
   position: absolute; right: -80px; top: -80px; z-index: 1;
@@ -622,11 +622,11 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 /* ---------- By the numbers ---------- */
 .nums-grid { display: grid; grid-template-columns: 1fr 0.92fr; gap: clamp(40px, 5vw, 76px); align-items: center; }
 .nums-head h2 { max-width: 14ch; }
-.nums-head p { font-size: 16.5px; color: var(--grey); margin-top: 20px; max-width: 46ch; }
+.nums-head p { font-size: 16px; color: var(--grey); margin-top: 20px; max-width: 46ch; }
 .num-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 36px; margin-top: 40px; }
 .num-stat .n { font-size: clamp(34px, 3.6vw, 50px); font-weight: 700; letter-spacing: -0.02em; line-height: 1; color: var(--charcoal); }
 .num-stat .n span { color: var(--moss); }
-.num-stat .l { font-size: 14.5px; color: var(--grey); margin-top: 8px; }
+.num-stat .l { font-size: 16px; color: var(--grey); margin-top: 8px; }
 .nums-img { position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 460px; align-self: stretch; }
 
 /* ---------- Testimonial carousel ---------- */
