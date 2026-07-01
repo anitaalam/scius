@@ -317,6 +317,28 @@ if (mobileNav && navToggle) {
   requestAnimationFrame(update);
 })();
 
+// Parallax scroll for insight article images
+(function () {
+  const containers = document.querySelectorAll('.article-wide-img, .article-img-pair figure');
+  if (!containers.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function update() {
+    const wh = window.innerHeight;
+    containers.forEach(function (container) {
+      var img = container.querySelector('img');
+      if (!img) return;
+      var rect = container.getBoundingClientRect();
+      // 0 when element enters bottom, 1 when it exits top
+      var progress = 1 - (rect.bottom / (wh + rect.height));
+      // Shift image between -10% and +10% of its container
+      var shift = (progress - 0.5) * 20;
+      img.style.transform = 'translateY(' + shift + '%)';
+    });
+    requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+})();
+
 // Contact page image slideshow (fade in/out)
 (function() {
   const slides = document.querySelectorAll('.contact-slideshow .slide');
