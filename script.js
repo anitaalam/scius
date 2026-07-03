@@ -336,7 +336,7 @@ if (mobileNav && navToggle) {
 
 // Scroll-driven zoom for insight article images
 (function () {
-  const containers = document.querySelectorAll('.article-wide-img, .article-img-pair figure');
+  const containers = document.querySelectorAll('.article-img-wrap');
   if (!containers.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   function update() {

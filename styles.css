@@ -1774,13 +1774,16 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 
 /* Article Images */
+.article-img-wrap {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
 .article-wide-img {
   margin: 48px 0;
 }
 .article-wide-img img {
   width: 100%; display: block; object-fit: cover;
   aspect-ratio: 16 / 9;
-  border-radius: var(--radius-lg);
   will-change: transform;
   transition: transform 0.3s ease-out;
 }
@@ -1798,7 +1801,6 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .article-img-pair img {
   width: 100%; display: block; object-fit: cover;
   aspect-ratio: 4 / 3;
-  border-radius: var(--radius-lg);
   will-change: transform;
   transition: transform 0.3s ease-out;
 }
