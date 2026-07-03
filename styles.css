@@ -1762,9 +1762,10 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 
 /* Pull Quote */
 .article-pullquote {
-  margin: 48px 0; padding: 32px 36px;
+  margin: 48px 0; padding: 32px 40px;
   border-left: 4px solid #778335;
-  background: var(--off-white); border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--offwhite); border-radius: 0 var(--radius) var(--radius) 0;
+  overflow: visible;
 }
 .article-pullquote p {
   font-size: clamp(18px, 1.8vw, 22px); line-height: 1.6;
@@ -1775,13 +1776,11 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 /* Article Images */
 .article-wide-img {
   margin: 48px 0;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
 }
 .article-wide-img img {
   width: 100%; display: block; object-fit: cover;
-  height: 120%; /* extra height for parallax shift */
-  border-radius: 0;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
   will-change: transform;
   transition: transform 0.1s linear;
 }
@@ -1794,13 +1793,12 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   gap: clamp(16px, 2vw, 24px); margin: 48px 0;
 }
 .article-img-pair figure {
-  overflow: hidden;
-  border-radius: var(--radius-lg);
+  margin: 0;
 }
 .article-img-pair img {
   width: 100%; display: block; object-fit: cover;
-  height: 120%; /* extra height for parallax shift */
-  border-radius: 0;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
   will-change: transform;
   transition: transform 0.1s linear;
 }
