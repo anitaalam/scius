@@ -1082,6 +1082,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 /* Hero */
 .insights-hero {
   padding: clamp(120px, 14vw, 200px) 0 clamp(40px, 5vw, 72px);
+  background: var(--offwhite);
 }
 .insights-title {
   font-family: var(--font-sans);
@@ -1118,6 +1119,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 /* Featured grid — 1 big left + 3 stacked right */
 .insights-featured {
   padding: clamp(20px, 3vw, 40px) 0 clamp(40px, 5vw, 72px);
+  background: var(--offwhite);
 }
 .featured-grid {
   display: grid;
@@ -1224,7 +1226,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 /* All posts grid — 3 columns */
 .insights-grid-section {
   padding: clamp(60px, 7vw, 100px) 0 clamp(60px, 8vw, 100px);
-  background: var(--offwhite);
+  background: var(--white);
 }
 .insights-grid {
   display: grid;
