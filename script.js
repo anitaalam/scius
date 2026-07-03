@@ -334,7 +334,7 @@ if (mobileNav && navToggle) {
   requestAnimationFrame(update);
 })();
 
-// Parallax scroll for insight article images
+// Scroll-driven zoom for insight article images
 (function () {
   const containers = document.querySelectorAll('.article-wide-img, .article-img-pair figure');
   if (!containers.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -347,9 +347,12 @@ if (mobileNav && navToggle) {
       var rect = container.getBoundingClientRect();
       // 0 when element enters bottom, 1 when it exits top
       var progress = 1 - (rect.bottom / (wh + rect.height));
-      // Shift image between -10% and +10% of its container
-      var shift = (progress - 0.5) * 20;
-      img.style.transform = 'translateY(' + shift + '%)';
+      // Clamp to 0–1 range
+      progress = Math.max(0, Math.min(1, progress));
+      // Zoom from 1.0 → 1.08 as image reaches center, back to 1.0 as it exits
+      // peak at progress 0.5 (center of viewport)
+      var zoom = 1 + 0.08 * (1 - Math.abs(progress - 0.5) * 2);
+      img.style.transform = 'scale(' + zoom + ')';
     });
     requestAnimationFrame(update);
   }
