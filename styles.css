@@ -1035,7 +1035,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
   width: 100%; aspect-ratio: 1 / 1; border-radius: var(--radius-lg);
   overflow: hidden; margin-bottom: 32px;
 }
-.bio-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bio-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 
 .bio-eyebrow {
   font-size: 13px; font-weight: 600; letter-spacing: 0.14em;
