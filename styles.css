@@ -752,8 +752,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 
 /* Client logos marquee */
-.work-logos { padding: clamp(8px, 1.5vw, 16px) 0; }
-.work-logos-line { height: 1px; background: rgba(0,0,0,0.08); }
+.work-logos { padding: clamp(8px, 1.5vw, 16px) 0; background: #fff; }
 .logo-marquee {
   overflow: hidden; position: relative;
   padding: clamp(24px, 4vw, 44px) 0;
