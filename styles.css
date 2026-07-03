@@ -615,13 +615,29 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 .story-body p:first-child { font-size: 16px; color: var(--charcoal); }
 .story-body p:last-child { margin-bottom: 0; }
 .story-img { margin-top: clamp(40px, 5vw, 64px); width: 100%; aspect-ratio: 16 / 8; border-radius: var(--radius-lg); overflow: hidden; position: relative; }
+.story-img img { width: 100%; height: 120%; object-fit: cover; position: absolute; top: -10%; left: 0; will-change: transform; transition: transform 0.1s linear; }
 
 /* ---------- Trusted by ---------- */
 .trust { text-align: center; }
 .trust .label { font-size: 14px; font-weight: 600; color: #8a8884; letter-spacing: .01em; }
-.logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 26px 52px; margin-top: 34px; }
-.logos .wm { font-size: clamp(17px, 1.7vw, 21px); font-weight: 700; letter-spacing: -0.01em; color: #a3a19b; transition: color .25s ease; white-space: nowrap; }
-.logos .wm:hover { color: var(--charcoal); }
+.logos-marquee {
+  overflow: hidden;
+  margin-top: 34px;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.logos-track {
+  display: flex;
+  align-items: center;
+  gap: 52px;
+  width: max-content;
+  animation: marquee-scroll 20s linear infinite;
+}
+.logos-track .wm { font-size: clamp(17px, 1.7vw, 21px); font-weight: 700; letter-spacing: -0.01em; color: #a3a19b; white-space: nowrap; }
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
 /* ---------- By the numbers ---------- */
 .nums-grid { display: grid; grid-template-columns: 1fr 0.92fr; gap: clamp(40px, 5vw, 76px); align-items: center; }
@@ -667,7 +683,7 @@ body:has(section[data-screen-label="About hero"]) .hero p.sub {
 }
 @media (max-width: 760px) {
   .num-stats { gap: 28px 24px; }
-  .logos { gap: 20px 34px; }
+  .logos-track { gap: 34px; }
 }
 
 /* ---------- TEAM PAGE ---------- */

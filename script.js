@@ -317,6 +317,23 @@ if (mobileNav && navToggle) {
   requestAnimationFrame(update);
 })();
 
+// Parallax scroll for story image on about page
+(function () {
+  const storyImg = document.getElementById('story-img');
+  if (!storyImg || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const parent = storyImg.parentElement;
+
+  function update() {
+    const wh = window.innerHeight;
+    const rect = parent.getBoundingClientRect();
+    const progress = 1 - (rect.bottom / (wh + rect.height));
+    const shift = (progress - 0.5) * 20;
+    storyImg.style.transform = 'translateY(' + shift + '%)';
+    requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+})();
+
 // Parallax scroll for insight article images
 (function () {
   const containers = document.querySelectorAll('.article-wide-img, .article-img-pair figure');
